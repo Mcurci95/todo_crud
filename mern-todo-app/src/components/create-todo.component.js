@@ -30,6 +30,22 @@ export default class CreateTodo extends Component {
         });
     }
 
+    onSubmit(e) {
+        e.preventDefault();
+        console.log("Submitting form");
+        console.log(`Todo Description: ${this.state.todo_description}`);
+        console.log(`Todo Responsible: ${this.state.todo_responsible}`);
+        console.log(`Todo Priority: ${this.state.todo_priority}`);
+
+
+        this.setState({
+            todo_description: '',
+            todo_responsible: '',
+            todo_priorty: '',
+            todo_complete: false
+        });
+    }
+
     render() {
         return (
             <div>
