@@ -12,6 +12,24 @@ export default class CreateTodo extends Component {
         }
     }
 
+    onChangeTodoDescription(e) {
+        this.setState({
+            todo_description: e.target_value
+        });
+    }
+
+    onChangeTodoResponsible(e){
+        this.setState({
+            todo_responsible: e.target_value
+        });
+    }
+
+    onChangeTodoPriority(e) {
+        this.setState({
+            todo_priorty: e.target_value
+        });
+    }
+
     render() {
         return (
             <div>
