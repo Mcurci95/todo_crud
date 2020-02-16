@@ -10,7 +10,14 @@ export default class CreateTodo extends Component {
             todo_priorty: '',
             todo_complete: false
         }
+        this.onChangeTodoDescription = this.onChangeTodoDescription.bind(this);
+        this.onChangeTodoPriority = this.onChangeTodoPriority.bind(this);
+        this.onChangeTodoResponsible = this.onChangeTodoResponsible.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
+
+    
+    
 
     onChangeTodoDescription(e) {
         this.setState({
