@@ -55,8 +55,32 @@ export default class CreateTodo extends Component {
 
     render() {
         return (
-            <div>
-                <p>Welcome to create todo Component!</p>
+            <div style={{marginTop: 10}}>
+                <h3>Create new todo</h3>
+                <form onSubmit={this.onSubmit}>
+                    <div className='form-group'>
+                        <label>Description: </label>
+                        <input 
+                            type="text"
+                            className="form-control"
+                            value={this.state.todo_description}
+                            onChange={this.onChangeTodoDescription}
+                            />
+                    </div>
+                    <div className='form-group'>
+                        <label>Responsible: </label>
+                        <input
+                            type="text"
+                            className="form-check-input"
+                            type="radio"
+                            name="priorityOptions"
+                            id="priorityLow"
+                            value="Low"
+                            checked={this.state.todo_priority==='Low'} 
+                            onChange={this.onChangeTodoPriority}
+                            />
+                    </div>
+                </form>
             </div>
         )
     }
